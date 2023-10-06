@@ -1,0 +1,231 @@
+/* header */
+header {
+    background: #fff;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+.header {
+    /* background: aqua; */
+    max-width: 1200px;
+    height: 100px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h1 {width: 105px;}
+.header h1 a {}
+.header h1 a img {width: 100%;}
+.header > ul {
+    display: flex;
+}
+.header > ul > li {
+    margin-right: 40px;
+    position: relative;
+}
+.header > ul > li:last-child {
+    margin-right: 0;
+}
+.header > ul > li a:last-child {
+    padding-right: 0;
+}
+.header > ul > li > a {
+    display: block;
+    font-size: 1.313rem;
+    line-height: 100px;
+    text-align: center;
+    padding:0 20px;
+}
+.header > ul > li .sub {
+    display: none;
+    position: absolute;
+    width: 200px;
+    background: #fff;
+}
+.header > ul > li .sub > li {}
+.header > ul > li .sub > li > a {
+    display: block;
+    margin-bottom: 30px;
+}
+/* m_opennav */
+.header #m_nav {
+    display: none;
+}
+.header #m_nav .bar {}
+.header #m_nav .bar span {}
+.header #m_nav nav {}
+.header #m_nav nav > ul {}
+.header #m_nav nav > ul > li {}
+.header #m_nav nav > ul > li > a {}
+.header #m_nav nav > ul > li .sub {}
+.header #m_nav nav > ul > li .sub li {}
+.header #m_nav nav > ul > li .sub li a {}
+/* main */
+main {}
+/* main1 */
+main .visual {
+    width: 100%;
+    height: 100vh;
+    /* height: 820px; */
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+}
+main .visual .txt {
+    position: absolute;
+    width: 100%;
+    bottom:150px;
+    z-index: 900;
+}
+main .visual .txt h1 {
+    font-size: 3.625rem;
+    font-weight: 700;
+    text-align: center;
+    color:#fff;
+    margin-bottom: 50px;
+}
+main .visual .txt .link {
+    display: flex;
+    justify-content: center;
+}
+main .visual .txt .link a {
+    font-size: 1.625rem;
+    padding:20px 0;
+    color:#fff;
+    border: 2px solid #fff;
+    width: 250px;
+    display: block;
+    text-align: center;
+}
+main .visual .txt .link .more {background:#c3002f;}
+main .visual .txt .link .drive {
+    margin-left: 30px;
+}
+main .visual .video {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+main .visual .video iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+}
+main .visual:hover:not(.video) {}
+/* main .visual video {
+    width: 100%;
+} */
+/* main2 새로운소식 */
+main .new_wrap {
+    width: 1200px;
+    margin: 0 auto;
+    padding:150px 0;
+}
+main .new_wrap .txt {}
+main .new_wrap .txt p {font-size: 1.333rem;}
+main .new_wrap .txt h2 {
+    font-size: 2.369rem;
+    font-weight: 500;
+    margin: 30px 0 50px;
+}
+main .new_wrap .container {
+    display: grid;
+    grid-template-columns: 510px auto;
+    /* grid-template-columns: repeat(2, minmax(0px, 1fr)); */
+    gap:0 66px;
+}
+main .new_wrap .container .left {}
+main .new_wrap .container .txt {
+    white-space: nowrap;
+}
+main .new_wrap .container .txt a {
+    display: block;
+    font-size: 1.438rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+main .new_wrap .container .txt p {font-size: 16px;}
+main .new_wrap .container .left .new1 {}
+main .new_wrap .container .left .new1 a {}
+main .new_wrap .container .left .new1 a img {
+    width: 100%;
+    height: 585px;
+    object-fit: cover;
+}
+main .new_wrap .container .left .new1 .txt {}
+main .new_wrap .container .left .new1 .txt a {
+    margin-top: 30px;
+}
+main .new_wrap .container .left .new1 .txt p {}
+main .new_wrap .container .right {}
+main .new_wrap .container .right .contents {
+    display: flex;
+    padding-bottom: 20px;
+    align-items: center;
+    border-bottom: 1px solid #aaa;
+}
+main .new_wrap .container .right .new2 > a,
+main .new_wrap .container .right .new3 > a,
+main .new_wrap .container .right .new4 > a {
+    width: 350px;
+    margin-right: 30px;
+}
+main .new_wrap .container .right .contents a img {width: 100%;}
+main .new_wrap .container .contents {}
+main .new_wrap .container .contents .txt {}
+main .new_wrap .container .contents .txt a {
+
+}
+main .new_wrap .container .contents .txt p {}
+main .new_wrap .container .new2 {}
+main .new_wrap .container .new3,
+main .new_wrap .container .new4 {
+    margin-top: 20px;
+}
+main .new_wrap .container .new4 {
+    border: none;
+}
+/* main3 시승신청 */
+main .drive_bnr {
+    background: yellow;
+}
+main .drive_bnr .txt {}
+main .drive_bnr .txt p {font-size: 1.333rem;}
+main .drive_bnr .txt h2 {
+    font-size: 2.813rem;
+    font-weight: 700;
+}
+main .drive_bnr .txt .drive {
+
+}
+main .drive_bnr img {
+    width: 100%;
+}
+/* main4 차량모델 */
+main .car_wrap {}
+main .car_wrap .txt {}
+main .car_wrap .txt p {}
+main .car_wrap .txt h2 {}
+main .car_wrap .container {}
+main .car_wrap .container .items {}
+main .car_wrap .container .items img {width: 100%;}
+main .car_wrap .container .items p {}
+main .car_wrap .container .items .view {}
+/* footer */
+footer {}
+footer .top {}
+footer .top .top_wrap {}
+footer .top .top_wrap .txt {}
+footer .top .top_wrap .txt span {}
+footer .top .top_wrap .txt a {}
+footer .btm {}
+footer .btm .btm_wrap {}
+footer .btm .btm_wrap .left {}
+footer .btm .btm_wrap .left a {}
+footer .btm .btm_wrap .right {}
+footer .btm .btm_wrap .right a {}
+footer .btm .btm_wrap .right p {}
