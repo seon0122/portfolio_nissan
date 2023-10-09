@@ -104,17 +104,18 @@ main .visual .txt .link .more {background:#c3002f;}
 main .visual .txt .link .drive {
     margin-left: 30px;
 }
-main .visual .video {
-    position: relative;
-    padding-bottom: 56.25%;
+main .visual video {
+    width: 100%;
+    /* position: relative; */
+    /* padding-bottom: 56.25%; */
 }
-main .visual .video iframe {
+/* main .visual .video iframe {
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     right: 0;
-}
+} */
 main .visual:hover:not(.video) {}
 /* main .visual video {
     width: 100%;
@@ -177,55 +178,145 @@ main .new_wrap .container .right .new4 > a {
 main .new_wrap .container .right .contents a img {width: 100%;}
 main .new_wrap .container .contents {}
 main .new_wrap .container .contents .txt {}
-main .new_wrap .container .contents .txt a {
-
-}
+main .new_wrap .container .contents .txt a {}
 main .new_wrap .container .contents .txt p {}
 main .new_wrap .container .new2 {}
 main .new_wrap .container .new3,
 main .new_wrap .container .new4 {
     margin-top: 20px;
 }
-main .new_wrap .container .new4 {
+main .new_wrap .container .contents:last-child {
     border: none;
 }
 /* main3 시승신청 */
 main .drive_bnr {
-    background: yellow;
+    /* background: yellow; */
+    width: 100%;
+    /* height: 800px; */
+    position: relative;
 }
-main .drive_bnr .txt {}
+main .drive_bnr .txt {
+    position: absolute;
+    width: 100%;
+    top:304px;
+    color: #fff;
+    margin-left: 150px;
+}
 main .drive_bnr .txt p {font-size: 1.333rem;}
 main .drive_bnr .txt h2 {
     font-size: 2.813rem;
     font-weight: 700;
+    padding:35px 0 50px;
 }
 main .drive_bnr .txt .drive {
-
+    display: inline-block;
+    font-size: 1.625rem;
+    font-weight: 500;
+    padding:20px 45px;
+    background:#fff;
+    border-radius: 30px;
 }
 main .drive_bnr img {
     width: 100%;
 }
 /* main4 차량모델 */
-main .car_wrap {}
+main .car_wrap {
+    background:#f4f2ec;
+}
+main .car_wrap .car_contents {
+    width: 1200px;
+    margin: 0 auto;
+    padding:150px 0;
+}
 main .car_wrap .txt {}
-main .car_wrap .txt p {}
-main .car_wrap .txt h2 {}
-main .car_wrap .container {}
-main .car_wrap .container .items {}
-main .car_wrap .container .items img {width: 100%;}
-main .car_wrap .container .items p {}
-main .car_wrap .container .items .view {}
+main .car_wrap .txt p {font-size:1.333rem;}
+main .car_wrap .txt h2 {
+    font-size: 2.369rem;
+    font-weight: 500;
+    margin:30px 0 50px;
+    /* margin-top: 30px; */
+    /* margin-bottom: 30px; */
+}
+main .car_wrap .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .car_wrap .container .items {
+    width: 360px;
+}
+main .car_wrap .container .items img {
+    /* margin:50px 0 30px; */
+    width: 100%;
+}
+/* main .car_wrap .container .car1 img {
+    width: 100%;
+    transform: scale(1.3);
+}
+main .car_wrap .container .car2 img,
+main .car_wrap .container .car3 img {
+    width: 100%;
+    transform: scale(1.2);
+} */
+main .car_wrap .container .items p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin:30px 0;
+}
+main .car_wrap .container .items .view {
+    display: inline-block;
+    width: 360px;
+    text-align: center;
+    font-size: 1.625rem;
+    padding: 20px 50px;
+    background: #c3002f;
+    color: #fff;
+    /* margin-top:30px; */
+}
 /* footer */
-footer {}
-footer .top {}
-footer .top .top_wrap {}
-footer .top .top_wrap .txt {}
-footer .top .top_wrap .txt span {}
-footer .top .top_wrap .txt a {}
-footer .btm {}
+footer {
+    background: #000;
+    color:#fff;
+    width: 100%;
+    height: 362px;
+}
+footer .top {
+    padding: 50px 0;
+    border-bottom: 1px solid #343434;
+}
+footer .top .top_wrap,
+footer .btm .btm_wrap {
+    width: 1200px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+footer .top .top_wrap .txt {
+    display: flex;
+    flex-flow: column;
+}
+footer .top .top_wrap .txt > * {
+    display: inline-block;
+    color: #fff;
+}
+footer .top .top_wrap .txt span {
+    margin-bottom: 35px;
+    font-size: 1.188rem;
+    font-weight: 500;
+}
+footer .top .top_wrap .txt a {margin-bottom: 25px;}
+footer .top .top_wrap .txt a:last-child {margin-bottom:0;}
+footer .btm {
+    margin:50px 0 100px;
+}
 footer .btm .btm_wrap {}
+footer .btm .btm_wrap div > * {
+    display: block;
+    color: #fff;
+}
 footer .btm .btm_wrap .left {}
 footer .btm .btm_wrap .left a {}
-footer .btm .btm_wrap .right {}
+footer .btm .btm_wrap .right {display: flex;}
+footer .btm .btm_wrap .right > * {margin-left: 35px;}
 footer .btm .btm_wrap .right a {}
 footer .btm .btm_wrap .right p {}

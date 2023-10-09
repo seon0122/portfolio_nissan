@@ -81,12 +81,7 @@
                     <a href="#" class="drive">시승신청</a>
                 </div>
             </div>
-            <div class="video">
-                <iframe width="1920" height="900" src="https://www.youtube.com/embed/Gy3NIebDI0A?end=42&autoplay=1&mute=1&controls=0&loop=1&playlist=Gy3NIebDI0A" title="2023 Nissan ARIYA ProPILOT Park Assistance Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <!-- <iframe width="1920" height="900" src="https://www.youtube.com/embed/1Fq7lSYt6fI?end=46&autoplay=1&mute=1&controls=0&loop=1&playlist=1Fq7lSYt6fI" title="2024 Nissan Sentra® Performance Features" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-                <!-- <iframe width="1920" height="1080" src="https://www.youtube.com/embed/pBRsA-tieKQ?autoplay=1&mute=1&end=57&controls=0&loop=1&playlist=pBRsA-tieKQ" title="Introducing the Nissan Arizon concept" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-            </div>
-            <!-- <video src="./images/main_video.mp4" autoplay loop muted></video> -->
+            <video src="./images/main_video2.mp4#t=,42" id="vid" autoplay loop muted></video>
         </div>
         <!-- main2 새로운소식 -->
         <div class="new_wrap">
@@ -140,25 +135,27 @@
         </div>
         <!-- main4 차량모델 -->
         <div class="car_wrap">
-            <div class="txt">
-                <p>NISSAN CHOICE</p>
-                <h2>닛산과 함께 하는 특별한 선택</h2>
-            </div>
-            <div class="container">
-                <div class="items car1">
-                    <img src="./images/choice_001.png" alt="">
-                    <p>2023 닛산 20-23 콘셉트</p>
-                    <a href="#" class="view">자세히 보기</a>
+            <div class="car_contents">
+                <div class="txt">
+                    <p>NISSAN CHOICE</p>
+                    <h2>닛산과 함께 하는 특별한 선택</h2>
                 </div>
-                <div class="items car2">
-                    <img src="./images/choice_002.png" alt="">
-                    <p>2023 닛산 패스파인더</p>
-                    <a href="#" class="view">자세히 보기</a>
-                </div>
-                <div class="items car3">
-                    <img src="./images/choice_003.png" alt="">
-                    <p>2023 닛산 GT-R 니스모</p>
-                    <a href="#" class="view">자세히 보기</a>
+                <div class="container">
+                    <div class="items car1">
+                        <img src="./images/choice_001.png" alt="">
+                        <p>2023 닛산 20-23 콘셉트</p>
+                        <a href="#" class="view">자세히 보기</a>
+                    </div>
+                    <div class="items car2">
+                        <img src="./images/choice_002.png" alt="">
+                        <p>2023 닛산 패스파인더</p>
+                        <a href="#" class="view">자세히 보기</a>
+                    </div>
+                    <div class="items car3">
+                        <img src="./images/choice_003.png" alt="">
+                        <p>2023 닛산 GT-R 니스모</p>
+                        <a href="#" class="view">자세히 보기</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -194,5 +191,9 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.getElementById('vid').play();
+        console.log(vid)
+    </script>
 </body>
 </html>
