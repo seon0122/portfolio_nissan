@@ -1,1 +1,69 @@
 /* 반응형 css */
+@media screen and (max-width:1500px){
+    header {
+        width: calc(100% - 30px);
+    }
+    main .visual video {
+        width:auto;
+        height: 100%;
+    }
+}
+@media (max-width:1250px){
+    /* main2부터 재진행! */
+    main .new_wrap {
+        width: calc(100% - 30px);
+    }
+    main .new_wrap .container {
+        grid-template-columns: repeat(2, minmax(0px, 1fr));
+        gap:0 35px;
+    }
+    main .new_wrap .container .contents {
+        overflow: hidden;
+    }
+    main .new_wrap .container .right .new2 > a,
+    main .new_wrap .container .right .new3 > a,
+    main .new_wrap .container .right .new4 > a {
+        /* width: 280px; */
+    }
+    br {
+        display: inline-block;
+        content: " ";
+        padding: 0 2px;
+    }
+    main .new_wrap .container .right .contents .txt {
+        margin-left: 15px;
+    }
+}
+@media (max-width:1024px){
+    header > ul > li {margin-right: 20px;}
+}
+@media (max-width:950px){
+    header > ul > li > a {
+        font-size: 1.2rem;
+    }
+    header > ul > li {margin-right: 10px;}
+}
+@media (max-width:760px){
+    header > ul {display: none;}
+    header #m_nav {display: block;}
+    main .visual video {display: none;}
+    main .visual img {display: block;}
+    main .visual .txt h1 {
+        font-size: 3rem;
+        margin-bottom: 40px;
+    }
+    main .visual .txt .link a {
+        font-size: 1.313rem;
+        width: 180px;
+    }
+    main .visual .txt .link .drive {
+        margin-left: 20px;
+    }
+}
+@media (max-width:400px){
+    main .visual .txt h1 {font-size: 2.250rem;}
+    main .visual .txt .link a {
+        font-size: 16px;
+        width: 120px;
+    }
+}
