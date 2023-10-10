@@ -18,58 +18,56 @@
 </head>
 <body>
     <header>
-        <div class="header">
-            <h1><a href="#"><img src="./images/logo.jpg" alt="NISSAN"></a></h1>
-            <ul>
-                <li><a href="#">소개</a>
-                    <ul class="sub">
-                        <li><a href="#">What’s New</a></li>
-                        <li><a href="#">Nissan Intelligent Mobility</a></li>
-                        <li><a href="#">NISMO Perfomance</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">고객 지원</a>
-                    <ul class="sub">
-                        <li><a href="#">닛산 고객 케어 프로그램</a></li>
-                        <li><a href="#">서비스자료/정비/교육</a></li>
-                        <li><a href="#">자동차 부품 가격</a></li>
-                        <li><a href="#">자동차 부품 취급 설명서</a></li>
-                    </ul>    
-                </li>
-                <li><a href="#">이벤트/공지</a></li>
-                <li><a href="#">서비스센터</a></li>
-                <li><a href="#">고객지원센터</a></li>
-            </ul>
-            <!-- m_opennav -->
-            <div id="m_nav">
-                <div class="bar">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#">소개</a>
-                            <ul class="sub">
-                                <li><a href="#">What’s New</a></li>
-                                <li><a href="#">Nissan Intelligent Mobility</a></li>
-                                <li><a href="#">NISMO Perfomance</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">고객 지원</a>
-                            <ul class="sub">
-                                <li><a href="#">닛산 고객 케어 프로그램</a></li>
-                                <li><a href="#">서비스자료/정비/교육</a></li>
-                                <li><a href="#">자동차 부품 가격</a></li>
-                                <li><a href="#">자동차 부품 취급 설명서</a></li>
-                            </ul>    
-                        </li>
-                        <li><a href="#">이벤트/공지</a></li>
-                        <li><a href="#">서비스센터</a></li>
-                        <li><a href="#">고객지원센터</a></li>
-                    </ul>
-                </nav>
+        <h1><a href="#"><img src="./images/logo.jpg" alt="NISSAN"></a></h1>
+        <ul>
+            <li><a href="#">소개</a>
+                <ul class="sub">
+                    <li><a href="#">What’s New</a></li>
+                    <li><a href="#">Nissan Intelligent Mobility</a></li>
+                    <li><a href="#">NISMO Perfomance</a></li>
+                </ul>
+            </li>
+            <li><a href="#">고객 지원</a>
+                <ul class="sub">
+                    <li><a href="#">닛산 고객 케어 프로그램</a></li>
+                    <li><a href="#">서비스자료/정비/교육</a></li>
+                    <li><a href="#">자동차 부품 가격</a></li>
+                    <li><a href="#">자동차 부품 취급 설명서</a></li>
+                </ul>    
+            </li>
+            <li><a href="#">이벤트/공지</a></li>
+            <li><a href="#">서비스센터</a></li>
+            <li><a href="#">고객지원센터</a></li>
+        </ul>
+        <!-- m_opennav -->
+        <div id="m_nav">
+            <div class="bar">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="#">소개</a>
+                        <ul class="sub">
+                            <li><a href="#">What’s New</a></li>
+                            <li><a href="#">Nissan Intelligent Mobility</a></li>
+                            <li><a href="#">NISMO Perfomance</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고객 지원</a>
+                        <ul class="sub">
+                            <li><a href="#">닛산 고객 케어 프로그램</a></li>
+                            <li><a href="#">서비스자료/정비/교육</a></li>
+                            <li><a href="#">자동차 부품 가격</a></li>
+                            <li><a href="#">자동차 부품 취급 설명서</a></li>
+                        </ul>    
+                    </li>
+                    <li><a href="#">이벤트/공지</a></li>
+                    <li><a href="#">서비스센터</a></li>
+                    <li><a href="#">고객지원센터</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main>
@@ -81,7 +79,7 @@
                     <a href="#" class="drive">시승신청</a>
                 </div>
             </div>
-            <video src="./images/main_video2.mp4#t=,42" id="vid" autoplay loop muted></video>
+            <video src="./images/main_video2.mp4" autoplay loop muted></video>
         </div>
         <!-- main2 새로운소식 -->
         <div class="new_wrap">
@@ -110,7 +108,7 @@
                     <div class="contents new3">
                         <a href="#"><img src="./images/new_3.jpg" alt=""></a>
                         <div class="txt">
-                            <a href="#">365 사고수리 안심케어 프로그램</a>
+                            <a href="#">365 사고수리 안심케어<br> 프로그램</a>
                             <p>16가지 무상 점검 서비스</p>
                         </div>
                     </div>
@@ -191,9 +189,16 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        document.getElementById('vid').play();
-        console.log(vid)
+        // nav sub메뉴
+        $('.sub').hide()
+        $('header > ul > li').on('mouseover',function(){
+            $(this).find('.sub').stop().slideDown()
+        })
+        $('header > ul > li').on('mouseout',function(){
+            $('.sub').stop().slideUp()
+        })
     </script>
 </body>
 </html>
