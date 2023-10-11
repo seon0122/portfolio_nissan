@@ -237,7 +237,12 @@ main .new_wrap .container .new4 {
 main .new_wrap .container .contents:last-child {
     border: none;
 }
-main .new_wrap .container .new3 .txt a {line-height: 33px;}
+main .new_wrap .container .new3 .txt a,
+main .new_wrap .container .new4 .txt a {line-height: 33px;}
+main .new_wrap #new01-1, 
+main .new_wrap #new02-1,
+main .new_wrap #new03-1,
+main .new_wrap #new04-1 {display: none;}
 /* main3 시승신청 */
 main .drive_bnr {
     /* background: yellow; */

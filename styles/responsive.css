@@ -3,49 +3,139 @@
     header {
         width: calc(100% - 30px);
     }
+    /* main1 */
     main .visual video {
         width:auto;
         height: 100%;
     }
 }
 @media (max-width:1250px){
-    /* main2부터 재진행! */
+    /* main2 */
     main .new_wrap {
         width: calc(100% - 30px);
     }
     main .new_wrap .container {
-        grid-template-columns: repeat(2, minmax(0px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap:0 35px;
     }
-    main .new_wrap .container .contents {
-        overflow: hidden;
-    }
-    main .new_wrap .container .right .new2 > a,
-    main .new_wrap .container .right .new3 > a,
-    main .new_wrap .container .right .new4 > a {
-        /* width: 280px; */
-    }
+    main .new_wrap .container .contents .txt {width: 244px;}
+    main .new_wrap .container .txt a {font-size: 1.2rem; margin-bottom: 15px;}
     br {
         display: inline-block;
         content: " ";
-        padding: 0 2px;
+        padding: 0 1px;
     }
     main .new_wrap .container .right .contents .txt {
         margin-left: 15px;
+        width: 200px;
     }
+    /* main3 */
+    main .drive_bnr .txt {
+        top:35%;
+        padding-left: 70px;
+    }
+    main .drive_bnr .txt .drive {font-size: 1.3rem;}
 }
 @media (max-width:1024px){
     header > ul > li {margin-right: 20px;}
+    /* main2 */
+    main .new_wrap .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 25px;
+    }
+    main .new_wrap .container .txt a {font-size: 1rem;}
+    main .new_wrap .container .txt p {font-size: 14px;}
+    main .new_wrap .container .left .new1 .txt a {
+        margin-top: 15px;
+    }
+    main .new_wrap .container .right .contents {
+        padding:0;
+        border: none;
+    }
+    main .new_wrap .container .right .new2 > a, 
+    main .new_wrap .container .right .new3 > a, 
+    main .new_wrap .container .right .new4 > a {
+        width: 320px;
+    }
+    /* main3 */
+    main .drive_bnr .txt {
+        padding-left: 50px;
+    }
+    main .drive_bnr .txt p {font-size: 1.1rem;}
+    main .drive_bnr .txt h2 {
+        font-size: 2.3rem;
+        padding: 20px 0 35px    
+    }
+    main .drive_bnr .txt .drive {
+        font-size: 1.2rem;
+        padding: 15px 35px;
+    }
 }
 @media (max-width:950px){
     header > ul > li > a {
         font-size: 1.2rem;
     }
     header > ul > li {margin-right: 10px;}
+    /* main2 */
+    main .new_wrap {padding: 100px 0;}
+    main .new_wrap .container {
+        grid-template-rows: 1fr;
+        grid-template-columns: auto;
+        gap: 30px 0;
+    }
+    main .new_wrap .container .left .new1 {
+        display: flex;
+        align-items: center;
+        /* margin-bottom: 30px; */
+    }
+    main .new_wrap .container .new1 > a {width: 70%;}
+    main .new_wrap .container .left .new1 a img {height: auto;}
+    main .new_wrap .container .right {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 30px 0;
+    }
+    main .new_wrap .container .new3, 
+    main .new_wrap .container .new4 {
+        margin-top: 0;
+    }
+    main .new_wrap .container .right .new2 > a, 
+    main .new_wrap .container .right .new3 > a, 
+    main .new_wrap .container .right .new4 > a {
+        width: 70%;
+    }
+    main .new_wrap .container .contents .txt {
+        margin-left: 15px;
+        width: 200px;
+    }
+    main .new_wrap .container .contents .txt a {
+        margin-top: 0;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+    main .new_wrap .container .txt p {font-size: 16px;}
+    /* main2 이미지변경 */
+    main .new_wrap #new01,
+    main .new_wrap #new02,
+    main .new_wrap #new03,
+    main .new_wrap #new04 {display: none;}
+
+    main .new_wrap #new01-1,    
+    main .new_wrap #new02-1,
+    main .new_wrap #new03-1,
+    main .new_wrap #new04-1 {display: block;}
+    /* main3 */
+    main .drive_bnr .txt {
+        padding-left: 30px;
+    }
+    main .drive_bnr .txt p {font-size: 1rem;}
+    main .drive_bnr .txt h2 {font-size: 2rem;}
 }
 @media (max-width:760px){
     header > ul {display: none;}
     header #m_nav {display: block;}
+    /* main1 */
     main .visual video {display: none;}
     main .visual img {display: block;}
     main .visual .txt h1 {
@@ -59,6 +149,54 @@
     main .visual .txt .link .drive {
         margin-left: 20px;
     }
+    /* main2 */
+    main .new_wrap {padding: 50px 0;}
+    main .new_wrap .txt p {font-size: 1.1rem;}
+    main .new_wrap .txt h2 {
+        margin:20px 0 35px;
+        font-size: 2rem;
+    }
+    main .new_wrap .container .left .new1,
+    main .new_wrap .container .right .contents {
+        flex-flow: column;
+        align-items: flex-start;
+    }
+    main .new_wrap .container .new1 > a {width: 100%;}
+    main .new_wrap .container .right .new2 > a, 
+    main .new_wrap .container .right .new3 > a, 
+    main .new_wrap .container .right .new4 > a {width: 100%;}
+    main .new_wrap .container .contents .txt,
+    main .new_wrap .container .right .contents .txt {
+        margin-left: 0;
+        width: 100%;
+    }
+    main .new_wrap .container .contents .txt a {
+        margin-bottom: 10px;
+        font-size: 1.438rem;
+        margin-top: 15px;
+        height: auto;
+    }
+    main .new_wrap .container .new3 .txt a, 
+    main .new_wrap .container .new4 .txt a {line-height: normal;}
+    /* main3 */
+    main .drive_bnr img {
+        height: 550px;
+        object-fit: cover;
+    }
+    main .drive_bnr .txt {
+        padding-left: 15px;
+        top: 45%;
+    }
+}
+@media (max-width:580px){
+    /* main3 */
+    main .drive_bnr img {height: 520px;}
+    main .drive_bnr .txt p {font-size: 0.750rem;}
+    main .drive_bnr .txt h2 {
+        font-size: 1.375rem;
+        padding: 15px 0 35px;
+    }
+    main .drive_bnr .txt .drive {font-size: 16px;}
 }
 @media (max-width:400px){
     main .visual .txt h1 {font-size: 2.250rem;}
@@ -66,4 +204,11 @@
         font-size: 16px;
         width: 120px;
     }
+    /* main2 */
+    main .new_wrap .txt p {font-size: 0.750rem;}
+    main .new_wrap .txt h2 {font-size: 1.313rem;}
+    main .new_wrap .container .contents .txt a {font-size: 16px;}
+    main .new_wrap .container .contents .txt p {font-size: 0.750rem;}
+    /* main3 */
+    main .drive_bnr img {height: 480px;}
 }
