@@ -59,16 +59,17 @@
                 <ul>
                     <li><a href="#">소개
                         <i class="fa-solid fa-chevron-down"></i>
+                        <i class="fa-solid fa-chevron-up"></i>
                     </a>
-                        <!-- <i class="fa-solid fa-chevron-up"></i> -->
-                        <ul class="sub2">
-                            <li><a href="#">What’s New</a></li>
-                            <li><a href="#">Nissan Intelligent Mobility</a></li>
-                            <li><a href="#">NISMO Perfomance</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">고객 지원
-                        <i class="fa-solid fa-chevron-down"></i>
+                    <ul class="sub2">
+                        <li><a href="#">What’s New</a></li>
+                        <li><a href="#">Nissan Intelligent Mobility</a></li>
+                        <li><a href="#">NISMO Perfomance</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">고객 지원
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa-solid fa-chevron-up"></i>
                     </a>
                         <ul class="sub2">
                             <li><a href="#">닛산 고객 케어 프로그램</a></li>
@@ -167,19 +168,22 @@
                 </div>
                 <div class="container">
                     <div class="items car1">
-                        <img src="./images/choice_001.png" alt="" class="m1-1">
+                        <img src="./images/choice_001.png" alt="" class="m1">
+                        <img src="./images/model11.jpg" alt="" class="m11">
                         <p>2023 닛산 20-23 콘셉트</p>
-                        <a href="#" class="view">자세히 보기</a>
+                        <a href="#" class="view v1">자세히 보기</a>
                     </div>
                     <div class="items car2">
-                        <img src="./images/choice_002.png" alt="">
+                        <img src="./images/choice_002.png" alt="" class="m2">
+                        <img src="./images/model12.jpg" alt="" class="m12">
                         <p>2023 닛산 패스파인더</p>
-                        <a href="#" class="view">자세히 보기</a>
+                        <a href="#" class="view v2">자세히 보기</a>
                     </div>
                     <div class="items car3">
-                        <img src="./images/choice_003.png" alt="">
+                        <img src="./images/choice_003.png" alt="" class="m3">
+                        <img src="./images/model13.jpg" alt="" class="m13">
                         <p>2023 닛산 GT-R 니스모</p>
-                        <a href="#" class="view">자세히 보기</a>
+                        <a href="#" class="view v3">자세히 보기</a>
                     </div>
                 </div>
             </div>
@@ -227,6 +231,23 @@
             $('.sub').stop().slideUp()
         })
 
+        // main4 hover시 이미지 변경
+        $(document).ready(function() {
+            $('.items img:nth-child(2n)').hide()
+            $('.items .v1').hover(function() {
+                $(".items .m1").toggle()
+                $(".items .m11").toggle()
+            })
+            $('.items .v2').hover(function() {
+                $(".items .m2").toggle()
+                $(".items .m12").toggle()
+            })
+            $('.items .v3').hover(function() {
+                $(".items .m3").toggle()
+                $(".items .m13").toggle()
+            })
+        })
+
         // m_nav sub메뉴
         $('.bar').on('click',function(){
             $('#m_nav nav').stop().slideDown()
@@ -238,14 +259,32 @@
             $('.close').hide()
             $('.bar').show()
         })
-        // m_nv sub2 나타내기 (css 재구성)
-        // $('#m_nav nav > ul > li').on('click',function(){
-        //     $('.sub2').show()
-        //     $(this).find('.sub2').stop().slideDown()
+
+        // m_nav sub2 아이콘 변경
+        $('.sub2').hide()
+        // $('nav > ul > li > a').on('click',function(){
+        //     function toggleImages(imgSelector1, imgSelector2) {
+        //         $(imgSelector1).toggle();
+        //         $(imgSelector2).toggle();
+        //     }
+        //     $('.fa-chevron-up').hide()
+        //     $('nav > ul > li > a').click(function(){
+        //         toggleImages('.fa-chevron-down','.fa-chevron-up')
+        //     })
         // })
-        // $('#m_nav nav > ul > li').on('click',function(){
-        //     $('.sub2').hide()
-        //     $('.sub2').stop().slideUp()
+        
+        const sub2 = document.querySelectorAll('.sub2')
+        const m_nav = document.querySelectorAll('#m_nav nav > ul > li')
+        const up = document.querySelector('.fa-chevron-up')
+        const down = document.querySelector('.fa-chevron-down')
+        console.log(sub2, m_nav, up, down)
+        for(let i of sub2){i.style.display='none'}
+        // m_nav.forEach(function(target,index){
+        //     console.log(index)
+        //     target.addEventListener('click',function(){
+        //         for(let i of sub2){i.style.display='none'}
+        //         sub2[index].style.display = 'block'
+        //     })
         // })
     </script>
 </body>

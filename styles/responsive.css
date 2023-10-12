@@ -148,7 +148,7 @@
     main .new_wrap #new02,
     main .new_wrap #new03,
     main .new_wrap #new04 {display: none;}
-
+    
     main .new_wrap #new01-1,    
     main .new_wrap #new02-1,
     main .new_wrap #new03-1,
@@ -289,10 +289,16 @@
     /* main4 */
     main .car_wrap .car_contents {padding:50px 0;}
     main .car_wrap .container .items {width: 100%;}
-    main .car_wrap .container .items img {
+    main .car_wrap .container .items img:nth-child(1n) {
         width: 90%;
         margin: auto;
         display: block;
+    }
+    main .car_wrap .container .items img:nth-child(2n) {
+        width: 90%;
+        display: block;
+        overflow: hidden;
+        margin-left: 25px;
     }
     main .car_wrap .container .items p {
         font-size: 1.3rem;

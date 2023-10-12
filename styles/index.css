@@ -84,33 +84,32 @@ header #m_nav nav {
     top: 100px;
     background:#fff;
     left: 0;
-    z-index: 600;
     padding-bottom: 40px;
+    z-index: 600;
 }
 header #m_nav nav > ul {}
 header #m_nav nav > ul > li {
-    padding:25px 15px;
     border-bottom: 1px solid #aaa;
 }
 header #m_nav nav > ul > li:last-child {border: none;}
 header #m_nav nav > ul > li > a {
-    display: inline;
+    display: block;
     font-size: 1.313rem;
     display: flex;
     justify-content: space-between;
+    padding:25px 15px;
 }
-header #m_nav nav > ul > li .sub2 {
-    display: none;
-    position: absolute;
-    left: 0;
-    width: 100%;
-}
-header #m_nav nav > ul > li .sub2 li {
+header #m_nav nav > ul > li > a .fa-chevron-down {}
+header #m_nav nav > ul > li > a .fa-chevron-up {display: none;}
+header #m_nav nav > ul > li > .sub2 {
+    /* display: none; */
     padding:20px 0 30px 40px;
+}
+header #m_nav nav > ul > li > .sub2 li {
     margin-bottom: 27px;
 }
-header #m_nav nav > ul > li .sub2 li:last-child {margin-bottom: 0;}
-header #m_nav nav > ul > li .sub2 li a {
+header #m_nav nav > ul > li > .sub2 li:last-child {margin-bottom: 0;}
+header #m_nav nav > ul > li > .sub2 li a {
     display: block;
     font-size: 1.188rem;
 }
@@ -128,7 +127,7 @@ main .visual .txt {
     position: absolute;
     width: 100%;
     bottom:150px;
-    z-index: 900;
+    z-index: 300;
 }
 main .visual .txt h1 {
     font-size: 3.625rem;
@@ -321,6 +320,21 @@ main .car_wrap .container .items img {
     /* margin:50px 0 30px; */
     width: 100%;
 }
+main .car_wrap .container .items img:nth-child(2n) {
+    display: none;
+    height: auto;
+    border-radius: 10px;
+}
+main .car_wrap .container .items .m1,
+main .car_wrap .container .items .m2,
+main .car_wrap .container .items .m3 {
+    /* display: none; */
+}
+main .car_wrap .container .items .m11,
+main .car_wrap .container .items .m12,
+main .car_wrap .container .items .m13 {
+    display: none;
+}
 main .car_wrap .container .items p {
     font-size: 1.5rem;
     font-weight: 500;
@@ -342,6 +356,8 @@ main .car_wrap .container .items .view:hover {
     background: #fff;
     color: #c3002f;
 }
+main .car_wrap .container .items .v1:hover .m1 {display: none;}
+main .car_wrap .container .items .v1:hover .m11 {display: block;}
 /* footer */
 footer {
     background: #000;
