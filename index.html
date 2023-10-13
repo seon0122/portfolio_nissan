@@ -57,20 +57,14 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">소개
-                        <i class="fa-solid fa-chevron-down"></i>
-                        <i class="fa-solid fa-chevron-up"></i>
-                    </a>
-                    <ul class="sub2">
-                        <li><a href="#">What’s New</a></li>
-                        <li><a href="#">Nissan Intelligent Mobility</a></li>
-                        <li><a href="#">NISMO Perfomance</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">고객 지원
-                    <i class="fa-solid fa-chevron-down"></i>
-                    <i class="fa-solid fa-chevron-up"></i>
-                    </a>
+                    <li><a href="#">소개<i class="fa-solid fa-chevron-down"></i><i class="fa-solid fa-chevron-up"></i></a>
+                        <ul class="sub2">
+                            <li><a href="#">What’s New</a></li>
+                            <li><a href="#">Nissan Intelligent Mobility</a></li>
+                            <li><a href="#">NISMO Perfomance</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고객 지원<i class="fa-solid fa-chevron-down"></i><i class="fa-solid fa-chevron-up"></i></a>
                         <ul class="sub2">
                             <li><a href="#">닛산 고객 케어 프로그램</a></li>
                             <li><a href="#">서비스자료/정비/교육</a></li>
@@ -248,7 +242,7 @@
             })
         })
 
-        // m_nav sub메뉴
+        // m_nav sub메뉴 아이콘 변경
         $('.bar').on('click',function(){
             $('#m_nav nav').stop().slideDown()
             $('.bar').hide()
@@ -260,32 +254,25 @@
             $('.bar').show()
         })
 
-        // m_nav sub2 아이콘 변경
+        // m_nav 클릭 시 sub2메뉴 토글, 아이콘 변경
         $('.sub2').hide()
-        // $('nav > ul > li > a').on('click',function(){
-        //     function toggleImages(imgSelector1, imgSelector2) {
-        //         $(imgSelector1).toggle();
-        //         $(imgSelector2).toggle();
-        //     }
-        //     $('.fa-chevron-up').hide()
-        //     $('nav > ul > li > a').click(function(){
-        //         toggleImages('.fa-chevron-down','.fa-chevron-up')
-        //     })
-        // })
-                
-        const sub2 = document.querySelectorAll('.sub2')
-        const m_nav = document.querySelectorAll('#m_nav nav > ul > li')
-        const up = document.querySelector('.fa-chevron-up')
-        const down = document.querySelector('.fa-chevron-down')
-        console.log(sub2, m_nav, up, down)
-        for(let i of sub2){i.style.display='none'}
-        // m_nav.forEach(function(target,index){
-        //     console.log(index)
-        //     target.addEventListener('click',function(){
-        //         for(let i of sub2){i.style.display='none'}
-        //         sub2[index].style.display = 'block'
-        //     })
-        // })
+        $(document).ready(function () {
+            $("li").click(function () {
+                var sub2 = $(this).find(".sub2")
+                var chevronDown = $(this).find(".fa-chevron-down")
+                var chevronUp = $(this).find(".fa-chevron-up")
+
+                if (sub2.is(":visible")) {
+                    sub2.slideUp()
+                    chevronDown.show()
+                    chevronUp.hide()
+                } else {
+                    sub2.slideDown()
+                    chevronDown.hide()
+                    chevronUp.show()
+                }
+            })
+        })
     </script>
 </body>
 </html>
